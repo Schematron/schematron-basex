@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://expath.org/ns/pkg"
+    name="http://github.com/vincentml/schematron-basex"
+    abbrev="schematron-basex"
+    version="1.0"
+    spec="1.0">
+    
+    <title>Schematron for BaseX</title>
+    <dependency processor="basex"/>
+    <xquery>
+        <namespace>http://github.com/vincentml/schematron-basex</namespace>
+        <file>schematron.xqm</file>
+    </xquery>
+    
+</package>
+
