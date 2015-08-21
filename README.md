@@ -1,6 +1,6 @@
 # Schematron for BaseX
 
-XQuery module to use ISO Schematron in BaseX. This module uses the standard Schematron implementation from https://code.google.com/p/schematron/. 
+XQuery module to use ISO Schematron in [BaseX](http://basex.org/). This module uses the standard Schematron implementation from https://code.google.com/p/schematron/. 
 
 ## Usage
 
