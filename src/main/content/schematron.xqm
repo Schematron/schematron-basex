@@ -25,7 +25,7 @@ declare variable $_:info := ('info', 'information');
 (:~ 
  : Compile a given Schematron file so that it can be used to validate documents. 
  :)
-declare function _:compile($schematron) {
+declare function _:compile($schematron) as document-node(element(xsl:stylesheet)) {
   _:compile($schematron, map{} )
 };
 
