@@ -13,10 +13,10 @@ declare %unit:test function _:example1a() {
     unit:assert-equals(s:message-level(s:messages($svrl)[2]), 'info'),
     unit:assert-equals(s:message-level(s:messages($svrl)[3]), 'warn'),
     unit:assert-equals(s:message-level(s:messages($svrl)[4]), 'error'),
-    unit:assert-equals(data(s:messages($svrl)[3]/@location), '/document/title'),
-    unit:assert-equals(data(s:messages($svrl)[3]/*:text), 'short section has fewer than 3 paragraphs'),
-    unit:assert-equals(data(s:messages($svrl)[4]/@location), '/document/p[2]'),
-    unit:assert-equals(data(s:messages($svrl)[4]/*:text), 'p (paragraph) should not be empty')
+    unit:assert-equals(s:message-location(s:messages($svrl)[3]), '/document/title'),
+    unit:assert-equals(s:message-description(s:messages($svrl)[3]), 'short section has fewer than 3 paragraphs'),
+    unit:assert-equals(s:message-location(s:messages($svrl)[4]), '/document/p[2]'),
+    unit:assert-equals(s:message-description(s:messages($svrl)[4]), 'p (paragraph) should not be empty')
   )
 };
 
@@ -30,8 +30,8 @@ declare %unit:test function _:example1b() {
     unit:assert-equals(s:message-level(s:messages($svrl)[1]), 'info'),
     unit:assert-equals(s:message-level(s:messages($svrl)[2]), 'info'),
     unit:assert-equals(s:message-level(s:messages($svrl)[3]), 'warn'),
-    unit:assert-equals(data(s:messages($svrl)[3]/@location), '/document/title'),
-    unit:assert-equals(data(s:messages($svrl)[3]/*:text), 'short section has fewer than 3 paragraphs')
+    unit:assert-equals(s:message-location(s:messages($svrl)[3]), '/document/title'),
+    unit:assert-equals(s:message-description(s:messages($svrl)[3]), 'short section has fewer than 3 paragraphs')
   )
 };
 

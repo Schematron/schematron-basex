@@ -11,9 +11,9 @@ return (
     return concat(
       schematron:message-level($message)
       , ': ', 
-      $message/*:text
+      schematron:message-description($message)
       , ' (location: ',
-      $message/@location
+      schematron:message-location($message)
       , ')'
     )
   else 'No messages were reported'

@@ -86,3 +86,12 @@ declare function _:message-level($message) as xs:string {
   else if ($message[@role = $_:info]) then $_:info[1]
   else data($message/@role)
 };
+
+
+declare function _:message-description($message) as xs:string {
+  data($message/svrl:text)
+};
+
+declare function _:message-location($message) as xs:string {
+  data($message/@location)
+};

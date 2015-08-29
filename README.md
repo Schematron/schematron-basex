@@ -40,6 +40,14 @@ The message-level method returns 'error', 'warn' or 'info' (or custom values) ba
 
     let $level := schematron:message-level($message)
 
+To get the human text description from a message:
+
+    let $string := schematron:message-description($message)
+
+To get the XPath location where a message was generated:
+
+    let $string := schematron:message-location($message)
+
 Putting this all together:
 
 ```
@@ -50,7 +58,7 @@ let $svrl := schematron:validate(doc('document.xml'), $sch)
 return (
   schematron:is-valid($svrl),
   for $message in schematron:messages($svrl)
-  return concat(schematron:message-level($message), ': ', string($message))
+  return concat(schematron:message-level($message), ': ', schematron:message-description($message))
 )
 ```
 
