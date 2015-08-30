@@ -14,3 +14,14 @@ declare %unit:test function _:phase2() {
   return unit:assert(not(s:is-valid($r)), $r)
 };
 
+declare %unit:test function _:phase1string() {
+  let $s := s:compile(doc('0004.sch'), 'phase1')
+  let $r := s:validate(doc('0004.xml'), $s)
+  return unit:assert(s:is-valid($r), $r)
+};
+
+declare %unit:test function _:phase2string() {
+  let $s := s:compile(doc('0004.sch'), 'phase2')
+  let $r := s:validate(doc('0004.xml'), $s)
+  return unit:assert(not(s:is-valid($r)), $r)
+};

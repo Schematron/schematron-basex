@@ -32,12 +32,15 @@ declare function _:compile($schematron) as document-node(element(xsl:stylesheet)
 (:~ 
  : Compile a given Schematron file using given parameters so that it can be used to validate documents. 
  :)
-declare function _:compile($schematron, $params as map(xs:string, xs:string)) as document-node(element(xsl:stylesheet)) {
-  let $step1 := xslt:transform($schematron, $_:include, $params)
-  let $step2 := xslt:transform($step1, $_:expand, $params)
+declare function _:compile($schematron, $params) as document-node(element(xsl:stylesheet)) {
+  let $p := typeswitch ($params) 
+    case xs:string return map{'phase': $params}
+    default return $params
+  let $step1 := xslt:transform($schematron, $_:include, $p)
+  let $step2 := xslt:transform($step1, $_:expand, $p)
   let $step3 := if (xslt:version() eq "1.0") 
-    then xslt:transform($step2, $_:compile1, $params) 
-    else xslt:transform($step2, $_:compile2, $params)
+    then xslt:transform($step2, $_:compile1, $p) 
+    else xslt:transform($step2, $_:compile2, $p)
   return $step3
 };
 
