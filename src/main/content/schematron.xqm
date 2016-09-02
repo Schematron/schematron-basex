@@ -36,11 +36,11 @@ declare function _:compile($schematron, $params) as document-node(element(xsl:st
   let $p := typeswitch ($params) 
     case xs:string return map{'phase': $params}
     default return $params
-  let $step1 := xslt:transform($schematron, $_:include, $p)
-  let $step2 := xslt:transform($step1, $_:expand, $p)
+  let $step1 := xslt:transform($schematron, file:base-dir() || $_:include, $p)
+  let $step2 := xslt:transform($step1, file:base-dir() || $_:expand, $p)
   let $step3 := if (xslt:version() eq "1.0") 
-    then xslt:transform($step2, $_:compile1, $p) 
-    else xslt:transform($step2, $_:compile2, $p)
+    then xslt:transform($step2, file:base-dir() || $_:compile1, $p) 
+    else xslt:transform($step2, file:base-dir() || $_:compile2, $p)
   return $step3
 };
 

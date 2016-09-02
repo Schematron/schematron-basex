@@ -2,7 +2,7 @@
 <package xmlns="http://expath.org/ns/pkg"
     name="http://github.com/vincentml/schematron-basex"
     abbrev="schematron-basex"
-    version="1.0"
+    version="1.1"
     spec="1.0">
     
     <title>Schematron for BaseX</title>
