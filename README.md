@@ -4,7 +4,9 @@ XQuery module to use ISO Schematron in [BaseX](http://basex.org/). This module u
 
 ## Usage
 
-Install the module in one of the ways described in the BaseX documentation. Using the GUI, go to the Options menu, Packages, then Install, and select schematron-basex-1.0.xar. Alternatively, use the command `REPO INSTALL schematron-basex-1.0.xar`.
+Install the module in one of the ways described in the BaseX documentation. Using the GUI, go to the Options menu, Packages, then press Install from URL (or press Install if you have the file saved locally). Alternatively, use the command `REPO INSTALL`. You can install directly from GitHub using the URL:
+
+    REPO INSTALL https://github.com/vincentml/schematron-basex/raw/master/dist/schematron-basex-1.1.xar
 
 After the module is installed, in your XQuery code declare the module import:
 
@@ -75,7 +77,7 @@ By default XPath 1.0 is supported. This is based on BaseX's XSLT module which by
 
 ## Developing
 
-This module was developed using BaseX verion 8.2.3 beta, although it may work with earlier versions of BaseX.
+This module was developed using BaseX verion 8.2.3 beta and tested with version 8.5.3, although it may work with other versions of BaseX.
 
 To run the unit tests:
 
