@@ -4,10 +4,10 @@
  : @author Vincent M. Lizzi
  : @see LICENSE (The MIT License)
  : @see http://basex.org/
- : @see http://github.com/vincentml/schematron-basex
+ : @see http://github.com/Schematron/schematron-basex
  :)
 
-module namespace _ = "http://github.com/vincentml/schematron-basex";
+module namespace _ = "http://github.com/Schematron/schematron-basex";
 
 declare namespace sch = "http://purl.oclc.org/dsdl/schematron";
 declare namespace svrl = "http://purl.oclc.org/dsdl/svrl";

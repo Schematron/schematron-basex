@@ -6,11 +6,11 @@ XQuery module to use ISO Schematron in [BaseX](http://basex.org/). This module u
 
 Install the module in one of the ways described in the BaseX documentation. Using the GUI, go to the Options menu, Packages, then press Install from URL (or press Install if you have the file saved locally). Alternatively, use the command `REPO INSTALL`. You can install directly from GitHub using the URL:
 
-    REPO INSTALL https://github.com/vincentml/schematron-basex/raw/master/dist/schematron-basex-1.1.xar
+    REPO INSTALL https://github.com/Schematron/schematron-basex/raw/master/dist/schematron-basex-1.2.xar
 
 After the module is installed, in your XQuery code declare the module import:
 
-    import module namespace schematron = "http://github.com/vincentml/schematron-basex";
+    import module namespace schematron = "http://github.com/Schematron/schematron-basex";
 
 Your Schematron schema file first has to be compiled before it can be used to validate XML. The compiled Schematron can be re-used to validate multiple documents, or possibly stored in a collection for later use.
 
@@ -57,7 +57,7 @@ To get the XPath location where a message was generated:
 Putting this all together:
 
 ```
-import module namespace schematron = "http://github.com/vincentml/schematron-basex";
+import module namespace schematron = "http://github.com/Schematron/schematron-basex";
 
 let $sch := schematron:compile(doc('rules.sch'))
 let $svrl := schematron:validate(doc('document.xml'), $sch)

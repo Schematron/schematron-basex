@@ -1,6 +1,6 @@
 module namespace _ = "0005";
 
-import module namespace s = "http://github.com/vincentml/schematron-basex" at "../../main/content/schematron.xqm";
+import module namespace s = "http://github.com/Schematron/schematron-basex" at "../../main/content/schematron.xqm";
 
 declare %unit:test function _:example1a() {
   let $sch := s:compile(doc('example-1.sch'))

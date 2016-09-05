@@ -1,4 +1,4 @@
-import module namespace schematron = "http://github.com/vincentml/schematron-basex" at "../../main/content/schematron.xqm";
+import module namespace schematron = "http://github.com/Schematron/schematron-basex" at "../../main/content/schematron.xqm";
 
 let $sch := schematron:compile(doc('example-1.sch'))
 for $file in ('example-1a.xml', 'example-1b.xml', 'example-1c.xml')

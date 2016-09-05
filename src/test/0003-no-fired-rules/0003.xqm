@@ -1,6 +1,6 @@
 module namespace _ = "0003";
 
-import module namespace s = "http://github.com/vincentml/schematron-basex" at "../../main/content/schematron.xqm";
+import module namespace s = "http://github.com/Schematron/schematron-basex" at "../../main/content/schematron.xqm";
 
 (:~ Expect validation to fail if the Schematron doesn't match anything in the document. :)
 declare %unit:test function _:test() {

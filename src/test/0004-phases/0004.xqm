@@ -1,6 +1,6 @@
 module namespace _ = "0004";
 
-import module namespace s = "http://github.com/vincentml/schematron-basex" at "../../main/content/schematron.xqm";
+import module namespace s = "http://github.com/Schematron/schematron-basex" at "../../main/content/schematron.xqm";
 
 declare %unit:test function _:phase1() {
   let $s := s:compile(doc('0004.sch'), map{'phase': 'phase1'})

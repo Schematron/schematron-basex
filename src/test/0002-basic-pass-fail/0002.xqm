@@ -1,6 +1,6 @@
 module namespace _ = "0002";
 
-import module namespace s = "http://github.com/vincentml/schematron-basex" at "../../main/content/schematron.xqm";
+import module namespace s = "http://github.com/Schematron/schematron-basex" at "../../main/content/schematron.xqm";
 
 declare %unit:test function _:valid() {
   let $r := s:validate(doc('0002-valid.xml'), s:compile(doc('0002.sch')))
