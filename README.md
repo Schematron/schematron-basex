@@ -2,6 +2,8 @@
 
 XQuery module to use ISO Schematron in [BaseX](http://basex.org/). This module uses the standard Schematron implementation from https://code.google.com/p/schematron/. 
 
+> :warning: This module relies on the ["skeleton" Schematron](https://github.com/Schematron/schematron) implementation, which is no longer maintained. Please consider using [SchXslt](https://github.com/schxslt/schxslt) instead.
+
 ## Usage
 
 Install the module in one of the ways described in the BaseX documentation. Using the GUI, go to the Options menu, Packages, then press Install from URL (or press Install if you have the file saved locally). Alternatively, use the command `REPO INSTALL`. You can install directly from GitHub using the URL:
